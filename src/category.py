@@ -13,8 +13,8 @@ class Category:
         """Метод для инициализации экземпляра класса. Задаем значения атрибутам экземпляра."""
         self.name = name
         self.description = description
-        self.products = []
-        Category.category_count += 1
+        self.products = products
+        Category.product_count += len(self.products)
 
     def add_product(self, product):
         self.products.append(product)

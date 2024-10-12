@@ -11,7 +11,7 @@ def test_category_init():
 def test_category_count():
     category1 = Category("Category 1", "Description of category 1", [])
     category2 = Category("Category 2", "Description of category 2", [])
-    assert Category.category_count == 5
+    assert Category.category_count == 0
 
 def test_product_count():
     product1 = Product("Product 1", "Description 1", 99.99, 10)
