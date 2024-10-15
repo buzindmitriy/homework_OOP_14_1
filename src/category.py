@@ -1,4 +1,4 @@
-from src.product import product2, product1
+from src.product import Product, product2, product1
 
 
 class Category:
@@ -13,12 +13,23 @@ class Category:
         """Метод для инициализации экземпляра класса. Задаем значения атрибутам экземпляра."""
         self.name = name
         self.description = description
-        self.products = products
+        self.__products = products
         Category.product_count += len(self.products)
 
     def add_product(self, product):
-        self.products.append(product)
+        self.__products.append(product)
         Category.product_count += 1
+
+    @property
+    def products(self):
+        product_str = ""
+        for product in self.__products:
+            product_str += f"{product.name}, {product.price} руб. Остаток: {product.quantity} шт.\n"
+        return product_str
+
+    @property
+    def list_product(self):
+        return self.__products
 
 
 category1 = Category("Category 1", "Description of category 1", [])
