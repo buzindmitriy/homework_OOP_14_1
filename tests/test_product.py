@@ -1,39 +1,47 @@
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 
 from src.product import Product
-from src.category import Category
 
 
-def test_product_init():
-    product = Product("Test Product", "Test Description", 99.99, 10)
-    assert product.name == "Test Product"
-    assert product.description == "Test Description"
-    assert product.price == 99.99
-    assert product.quantity == 10
-
-
-def test_price_update(capsys, first_product):
-    first_product.__price = -100
-    message = capsys.readouterr()
-    assert message.out.strip() == ''
-
-
-def test_new_product():
-    product_dict = {
-        'name': 'Test Product',
-        'description': 'Test Description',
-        'price': 100,
-        'quantity': 10
-    }
-    new_product = Product.new_product(product_dict)
-    assert isinstance(new_product, Product)
-    assert new_product.name == product_dict['name']
-    assert new_product.price == product_dict['price']
-
-
-def test_add_product():
-    category = Category("Test Category", "Test Description", [])
-    product = Product("Test Product", "Test Description", 100, 10)
+def test_count_products_and_category(category, product) -> None:
+    assert category.product_count == 15
+    assert category.category_count == 5
     category.add_product(product)
-    assert product in category._Category__products
-    assert Category.product_count == 85
+    assert category.product_count == 16
+
+
+def test_products(product) -> None:
+    assert product.description == 'Я сама "вечность"'
+    assert product.name == "Nokia 3310"
+    assert product.price == 9.99
+    assert product.quantity == 1
+    assert str(product) == "Nokia 3310, 9.99 руб. Остаток: 1 шт."
+
+
+def test_new_product(new_product):
+    result = Product.new_product(new_product)
+    assert result.name == "Samsung Galaxy C23 Ultra"
+    assert result.description == "256GB, Серый цвет, 200MP камера"
+    assert result.price == 180000.0
+    assert result.quantity == 5
+
+
+def test_new_price(product):
+    product.price = 100.0
+    assert product.price == 100
+
+
+def test_new_price_negative(capsys, product):
+    product.price = -1
+    message = capsys.readouterr()
+    assert message.out.strip() == "Цена не должна быть нулевая или отрицательная"
+
+
+@patch("builtins.input", side_effect="y")
+def test_new_price_low(mock, product):
+    product.price = 5
+    assert product.price == 5
+
+
+def test_add(product2, product3):
+    assert product2 + product3 == 2580000.0
