@@ -18,8 +18,10 @@ class Product:
         return f"{self.name}, {self.__price} руб. Остаток: {self.quantity} шт."
 
     def __add__(self, other):
-        """Магический метод возвращает сумму цен двух товаров"""
-        return (self.price * self.quantity) + (other.price * other.quantity)
+        if type(other) is self.__class__:
+            return (self.price * self.quantity) + (other.price * other.quantity)
+        else:
+            raise TypeError
 
     @classmethod
     def new_product(cls, dict_product: dict, products=None):
