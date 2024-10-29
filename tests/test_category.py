@@ -3,6 +3,8 @@ from src.product import Product
 
 
 def test_count_products_and_category(category, product) -> None:
+    assert category.name == "Телефоны детства"
+    assert category.description == "Вспомнить как было классно"
     assert category.product_count == 4
     assert category.category_count == 1
     category.add_product(product)
