@@ -144,6 +144,55 @@ files = [
 toml = ["tomli"]
 
 [[package]]
+name = "extensionclass"
+version = "6.0"
+description = "Metaclass for subclassable extension types"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "ExtensionClass-6.0-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:31b0d95d6e2a7de5fd842a32a2086c970b806ed80e4a7d5fc3111d6b5cdab129"},
+    {file = "ExtensionClass-6.0-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:be3141dc58432bb344d40ca9fafa6ec249e385bb411d84cdff54eb5b40e7cb24"},
+    {file = "ExtensionClass-6.0-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1c94dd383e7308e98bc4328daff78dac1220fe0a7ac1dde59b4dfbfe17699501"},
+    {file = "ExtensionClass-6.0-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:f9e51f88c2905933c4652b1a1d3a3a651e7cccb3ca43446246d92162af159ae7"},
+    {file = "ExtensionClass-6.0-cp310-cp310-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:d1bff8542bd56dab11713d73837c14c7749219533794c5b32218d3c9488f6b80"},
+    {file = "ExtensionClass-6.0-cp310-cp310-win_amd64.whl", hash = "sha256:b7a494aaff1d859ea96f9057ead4b6ba9fa3606f76949be5227b0300815be374"},
+    {file = "ExtensionClass-6.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:74404ab6fb310961b456a8050081b1a056aa97598b6acf98056aa532a39eb96f"},
+    {file = "ExtensionClass-6.0-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:87f8f06c021b9ea623410c2ed5c1d289b30421a5962629b366c74fcc21e42b32"},
+    {file = "ExtensionClass-6.0-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:21a86762122991aadeb902c3aec7fc71a5ab97882ec71c07cfdc24dc891d45dd"},
+    {file = "ExtensionClass-6.0-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:a46b4f49e50674072e8b8e666e6dc59a73360f584782643907f1a4a0f65d6dbe"},
+    {file = "ExtensionClass-6.0-cp311-cp311-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:15d45ffb474e87e8d2994cdb33adda134ad39dcb09187eeeaeec73cdf14fbfcb"},
+    {file = "ExtensionClass-6.0-cp311-cp311-win_amd64.whl", hash = "sha256:791304d750fd26e9e7b4d667b6a1a371dc7f6bc3b7fee74f15154afb37bdbd68"},
+    {file = "ExtensionClass-6.0-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:774ec90e650628ea5a5542517682187f0f3c294f1689753b20c4040b2859227a"},
+    {file = "ExtensionClass-6.0-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:5cba5c8ccbf1549a78f76292fdbdc8ea5f18032cadb92e611ac6a2ded1d3befa"},
+    {file = "ExtensionClass-6.0-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:b866fe0e56f2510e02e10d7d64fa540e3f0c8317828c2713ab0e4cd378f53985"},
+    {file = "ExtensionClass-6.0-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:886b3bbb3c7775e0c25292350e3b2c9aaa1f5628d3127f734f0f5fee40f475e9"},
+    {file = "ExtensionClass-6.0-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:83333de0e1fe7960aa63eaa21149331909c6bc668d85cb9643c866bde3cb3518"},
+    {file = "ExtensionClass-6.0-cp312-cp312-win_amd64.whl", hash = "sha256:ffe6a5e4491c5e4893a91485cc41ffec71410b9fc2d6eeee5a580003b69dbed2"},
+    {file = "ExtensionClass-6.0-cp313-cp313-macosx_10_9_x86_64.whl", hash = "sha256:eeff257102bb944144ba54c4011c27b72f180fbc117cc790c1c6fd44e460b12c"},
+    {file = "ExtensionClass-6.0-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:76960f235960edff3ded6b57dc11f8e136d13468c4b79ac85f74e5aa737bf344"},
+    {file = "ExtensionClass-6.0-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8e654f559d4cc10dd70ae5c580429db43fc078e10cfd7c82dbe5fb2029cba504"},
+    {file = "ExtensionClass-6.0-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:1e707b894d844ddefdc35f9a13d7a9fcb6104c5cb1e2af89d9b7db43843c2a72"},
+    {file = "ExtensionClass-6.0-cp313-cp313-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3d9b1647fecc999080c9e43316d427c37e08db897abb05cd99a8d5bc19c7a4ff"},
+    {file = "ExtensionClass-6.0-cp313-cp313-win_amd64.whl", hash = "sha256:663de162eb5243f0277314a7f9952bcf61f6497e2fba42a7efadc41028edafca"},
+    {file = "ExtensionClass-6.0-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:cb86255cf1506207618a7df779f664a5279c054a366752724b61232a0b1a04a8"},
+    {file = "ExtensionClass-6.0-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:9db5af46f193b07defab847fcf31cb8bb5b2494bb58f91be46510c98e7aa6463"},
+    {file = "ExtensionClass-6.0-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a16e839a4adc2116320f41e52bfb56db6418532d60c7dff06f4e16313be2d0a8"},
+    {file = "ExtensionClass-6.0-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:295441bd7feb1844d66383b6c1828b701f9d1f9e5436b8bb95ddf6ee0c05f49f"},
+    {file = "ExtensionClass-6.0-cp38-cp38-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a8099bd236698497b4b5a180cd139dc4f2cc4a73c71a88394efb3234ea4cd9dc"},
+    {file = "ExtensionClass-6.0-cp38-cp38-win_amd64.whl", hash = "sha256:9bc72246b344358d4f50014ec9cbd0f0fbd55a23ad7038a4071ba6828f9779f1"},
+    {file = "ExtensionClass-6.0-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:8bf34641458d7c9b4fbc2d4214878aca04bbc25edc4d58c314f273865e604b03"},
+    {file = "ExtensionClass-6.0-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:953e07ee7851398b438585dbd7d2f448b8ff43cb868072a7eb873d0e84de97c0"},
+    {file = "ExtensionClass-6.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:faf9b234f19d6ca0c340cc5a8d6fec7ba3d5e52ee37d1ccc759a80c4d94a5a2d"},
+    {file = "ExtensionClass-6.0-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:268c6ab06f12284a905b38bff0b802ce9521a66e1c2c50bc030ea240dbe5473d"},
+    {file = "ExtensionClass-6.0-cp39-cp39-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2a1e2ff7b42a045b9d22127a1af89f683d0775279be6f2055082ebd75148963c"},
+    {file = "ExtensionClass-6.0-cp39-cp39-win_amd64.whl", hash = "sha256:d04c41ae1545c36f275f998084e50f8a48da458d10d267dc3a753d0a0e1d20d5"},
+    {file = "extensionclass-6.0.tar.gz", hash = "sha256:e36c9863f268b812811d783e4274ec369d9e152fc9fe6ecf7396a0cf8d06b09f"},
+]
+
+[package.extras]
+test = ["zope.testrunner"]
+
+[[package]]
 name = "flake8"
 version = "7.1.1"
 description = "the modular source code checker: pep8 pyflakes and co"
@@ -305,7 +354,21 @@ pytest = ">=4.6"
 [package.extras]
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "virtualenv"]
 
+[[package]]
+name = "record"
+version = "4.1"
+description = "Special Record objects used in Zope."
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "Record-4.1-py3-none-any.whl", hash = "sha256:bdfe5e9da6d138f2e17732b39db5c2bdae049088dda09aad3bd74738f78e5a01"},
+    {file = "Record-4.1.tar.gz", hash = "sha256:3dac2d1f852ae50736abc464e0e098d41f8196366130108a302b039447837f10"},
+]
+
+[package.dependencies]
+ExtensionClass = ">=4.1a1"
+
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "b9aea64a8d1fc8ee0ff1b6940ac9e7cb28d2613047e40b8db3506710ea2a5ad7"
+content-hash = "5c92ebaa011205d8847fc931f6392e754ab43fe0b26ad1936829a644b5e774b7"

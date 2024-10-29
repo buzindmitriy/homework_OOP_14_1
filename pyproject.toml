@@ -12,6 +12,7 @@ pytest = "^8.3.3"
 pytest-cov = "^5.0.0"
 flake8 = "^7.1.1"
 black = "^24.10.0"
+record = "^4.1"
 
 
 [build-system]
