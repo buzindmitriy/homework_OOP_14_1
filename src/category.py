@@ -1,7 +1,9 @@
+from src.product import Product
+
+
 class Category:
     """Класс описывает название категории и её описание. Подсчитывает количество
     продуктов в категории и количество категорий"""
-
     name: str
     description: str
     products: list
@@ -38,8 +40,17 @@ class Category:
 
     def add_product(self, product):
         """Метод добавляет продукт к списку продуктов в категории"""
-        self.__products.append(product)
-        Category.product_count += 1
+        if isinstance(product, Product):
+            self.__products.append(product)
+            Category.product_count += 1
+        else:
+            raise TypeError
+
+    def middle_price(self):
+        try:
+            return sum([product.price for product in self.__products]) / len(self.__products)
+        except ZeroDivisionError:
+            return 0
 
     @property
     def products(self):
